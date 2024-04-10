@@ -1,0 +1,37 @@
+.b_b{
+font-weight: 500;
+font-size: large;
+position: relative;
+top: 5px;
+left:1850px;
+}
+p{
+    font-size: large;
+    font-weight: 500;
+}
+h1{
+    font-size: large;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+label,input{
+    font-size: medium;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 15px;
+}
+#b3 , #b4 , #b5 , #b6{
+    font-size: large;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    top:40px;
+}
+#b1 , #b2{
+    font-size: large;
+    font-weight: 300;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    top:5px;
+    left:100px
+}

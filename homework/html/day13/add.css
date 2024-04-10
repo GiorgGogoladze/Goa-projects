@@ -1,0 +1,32 @@
+h1{
+    color:burlywood;
+    font-size: 65px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color: crimson;
+}
+
+p{
+    color:cadetblue;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color:violet;
+}
+
+a,button{
+    color: aqua;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
+    background-color:goldenrod;
+}
+h2{
+    color:chocolate;
+    font-size: 25px;
+    font-weight: 550;
+    font-family:'Courier New', Courier, monospace
+}

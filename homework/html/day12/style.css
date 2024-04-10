@@ -1,0 +1,30 @@
+h1{
+    color: burlywood;
+    font-size: 50px;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    text-decoration: overline;
+    text-decoration-color: orange;
+    text-decoration-style: wavy;
+}
+p{
+    color: burlywood;
+    font-size: 33px;
+    font-weight: 200;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    text-decoration:underline;
+    text-decoration-color: orange;
+    text-decoration-style: solid;
+}
+h2{
+    color:crimson;
+    font-size: 30px;
+    font-weight: 222;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    text-decoration:dashed;
+    text-decoration-color: darkslategray;
+    text-decoration-style: solid;
+}
