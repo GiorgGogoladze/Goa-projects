@@ -1,0 +1,141 @@
+
+header{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(233, 230, 230);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    border: 1px solid white;
+}
+header h1{
+    font-size: 20px;
+    margin-left: 20px;
+}
+main{
+    margin: 15px 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.f1{
+    background-color: #F7F7F7;
+    width: 400px;
+    height: 240px;
+    margin-bottom: 10px;
+    max-width: 400px;
+    min-width: 300px;
+}
+input,label{
+    display: block;
+    font-size: large;
+    margin-left: 10px;
+}
+input{
+    margin: 0 0 10px 10px;
+    padding: 2px;
+    width: 90%;
+    
+}
+select{
+    padding: 6px;
+    width: 92%;
+    margin-left: 10px;
+}
+.f2{
+    background-color: #F7F7F7;
+    width: 400px;
+    height: 280px;
+    max-width: 400px;
+    min-width: 300px;
+}
+.f5{
+    width: 370px;
+    margin: 5px auto;
+    height: 60px;
+}
+.f55 div{
+    width: 300px;
+}
+.checkbox-group {
+    display: inline-block;
+}
+.checkbox-group input{
+    width: unset;
+    position: relative;
+    margin-top: 5px;
+}
+.checkbox-group label{
+    position: relative;
+    left: 20px;
+    bottom: 26.5px;
+}
+.checkbox-group2 input{
+    position: relative;
+    bottom: 43px;
+    margin-left: 30px;
+}
+.checkbox-group2 label{
+    position: relative;
+    bottom: 69px;
+    left: 170px;
+}
+.notification-text{
+    position: relative;
+    bottom: 65px;
+    margin-left: 10px;
+}
+.main-s{
+    width: 50%;
+}
+.f3{
+    max-width: 450px;
+    min-width: 300px;
+}
+.f4{
+    height: 300px;
+    max-width: 450px;
+    min-width: 300px;
+}
+.f45{
+    height: 250px;
+}
+h3{
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.f45 h3{
+    margin-bottom: 5px;
+}
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+}
+
+.f1,
+.f2,
+.f3,
+.f4 {
+    background-color: #F7F7F7;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+}
+@media (min-width: 760px) {
+    .form-grid {
+        flex-direction: row;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        flex: 1;
+    }
+}
