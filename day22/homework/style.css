@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 18px;
+    color:aqua;
+}
+.navbar .First{
+    display: flex;
+    align-items: center;
+}
+.navbar .second{
+display: flex;
+align-items: center;
+}
+
+.navbar .third {
+display: flex;
+align-items: center;
+}
+
+.navbar .center {
+    flex-grow: 2;
+    justify-content: center;
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+.navbar ul li {
+    margin: 0 10px;
+    text-align: center;
+}
