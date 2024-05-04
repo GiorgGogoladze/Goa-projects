@@ -7,5 +7,3 @@ age= "13"
 height= "165 "
 
 
-
-print(name + " " + surname + " " + age + " " + height)
