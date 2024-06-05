@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Registration Form</title>
+</head>
+<body>
+
+<form id="registrationForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br><br>
+    
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br><br>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age"><br><br>
+    
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location"><br><br>
+    
+    <button type="button" onclick="register()">Register</button>
+</form>
+
+<script>
+    function register() {
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const age = document.getElementById('age').value;
+        const location = document.getElementById('location').value;
+
+        console.log(`Name: ${firstName} ${lastName}, Age: ${age}, Location: ${location}`);
+    }
+</script>
+
+</body>
+</html>

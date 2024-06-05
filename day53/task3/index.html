@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Paragraph Color</title>
+    <style>
+        .paragraph {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="paragraph">ეს არის პირველი პარაგრაფი.</p>
+    <p class="paragraph">ეს არის მეორე პარაგრაფი.</p>
+    <p class="paragraph">ეს არის მესამე პარაგრაფი.</p>
+
+    <button class="button" onclick="changeColor('green')">მწვანე</button>
+    <button class="button" onclick="changeColor('red')">წითელი</button>
+    <button class="button" onclick="changeColor('yellow')">ყვითელი</button>
+
+    <script>
+        function changeColor(color) {
+            var paragraphs = document.querySelectorAll('.paragraph');
+            paragraphs.forEach(function(paragraph) {
+                paragraph.style.color = color;
+            });
+        }
+    </script>
+
+</body>
+</html>

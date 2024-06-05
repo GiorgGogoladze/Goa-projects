@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script>
+        function decrement() {
+            // მოიძებნოს პარაგრაფი
+            const p = document.getElementById("counter");
+            // პაკრაგრაფის ტექსტი გადაყვანილი რიცხვში და შემცირება ერთით
+            let count = parseInt(p.textContent);
+            count--;
+            // განახლებული მნიშვნელობის ჩაწერა პაკრაგრაფში
+            p.textContent = count;
+        }
+
+        function reset() {
+            // პარაგრაფის მნიშვნელობის განულება
+            const p = document.getElementById("counter");
+            p.textContent = 0;
+        }
+
+        function increment() {
+            // მოიძებნოს პარაგრაფი
+            const p = document.getElementById("counter");
+            // პაკრაგრაფის ტექსტი გადაყვანილი რიცხვში და გაზრდა ერთით
+            let count = parseInt(p.textContent);
+            count++;
+            // განახლებული მნიშვნელობის ჩაწერა პაკრაგრაფში
+            p.textContent = count;
+        }
+    </script>
+</head>
+<body>
+    <p id="counter">0</p>
+    <button onclick="decrement()">-1</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="increment()">+1</button>
+</body>
+</html>

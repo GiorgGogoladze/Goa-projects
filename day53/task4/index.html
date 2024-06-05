@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Info</title>
+</head>
+<body>
+
+    <script>
+        var carInfo = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020,
+            color: "თეთრი",
+            engine: "1.8L",
+            getCarInfo: function() {
+                return `ავტომობილი არის ${this.year} წლის ${this.color} ფერის ${this.brand} ${this.model} ${this.engine} ძრავით.`;
+            }
+        };
+
+        // Example usage
+        console.log(carInfo.getCarInfo());
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <div class="form-container">
+        <form id="inputForm">
+            <label for="colorInput">პირველი ფერი:</label><br>
+            <input type="text" id="colorInput" name="colorInput"><br><br>
+            <label for="widthInput">მეორე სიგანე:</label><br>
+            <input type="number" id="widthInput" name="widthInput"><br><br>
+            <label for="heightInput">მესამე სიმაღლე:</label><br>
+            <input type="number" id="heightInput" name="heightInput"><br><br>
+            <label for="textInput">მეოთხე ტექსტი:</label><br>
+            <input type="text" id="textInput" name="textInput"><br><br>
+            <button type="button" onclick="changeDiv()">ინფორმაციის შეცვლა</button>
+        </form>
+    </div>
+    <div id="outputDiv">
+        <p></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

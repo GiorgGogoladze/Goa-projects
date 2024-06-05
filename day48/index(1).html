@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        #photo {
+            width: 300px; 
+        }
+    </style>
+</head>
+<body>
+    <button onclick="resizePhoto(300)">300</button>
+    <button onclick="resizePhoto(500)">500</button>
+    <br>
+    <img id="photo" src="giorgi.png" alt="photo">
+
+    <script>
+        function resizePhoto(size) {
+            document.getElementById('photo').style.width = size + 'px';
+        }
+    </script>
+</body>
+</html>

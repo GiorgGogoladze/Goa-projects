@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+.output {
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.output p {
+    font-size: 18px;
+    color: black;
+}

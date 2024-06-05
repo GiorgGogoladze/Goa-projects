@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Paragraph Colors</title>
+    <script>
+        function changeParagraphColors() {
+            // მოიძებნოს ყველა p თეგი
+            const paragraphs = document.querySelectorAll("p");
+            // ყველა პარაგრაფის ტექსტის ფერის შეცვლა
+            paragraphs.forEach(paragraph => {
+                paragraph.style.color = "green";
+            });
+        }
+
+        // ფუნქციის გამოძახება საიტის ჩატვირთვისთანავე
+        window.onload = changeParagraphColors;
+    </script>
+</head>
+<body>
+    <p>ეს არის პირველი პარაგრაფი</p>
+    <p>ეს არის მეორე პარაგრაფი</p>
+    <p>ეს არის მესამე პარაგრაფი</p>
+</body>
+</html>

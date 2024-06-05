@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Button Color</title>
+    <style>
+        .button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function changeColor() {
+            let button = document.getElementById('myButton');
+            button.style.backgroundColor = 'red';
+        }
+    </script>
+</head>
+<body>
+
+<button id="myButton" class="button" onclick="changeColor()">Click me</button>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Text Swap</title>
+    <script>
+        function swapParagraphText() {
+            // მოიძებნოს ყველა პარაკრაფი
+            const p1 = document.getElementById("p1");
+            const p2 = document.getElementById("p2");
+            const p3 = document.getElementById("p3");
+
+            // შეინახოს პირველი პარაგრაფის ტექსტი დროებით ცვლადში
+            const temp = p1.textContent;
+
+            // ტექსტების გაცვლა
+            p1.textContent = p3.textContent;
+            p3.textContent = p2.textContent;
+            p2.textContent = temp;
+        }
+    </script>
+</head>
+<body>
+    <p id="p1">ეს არის პირველი პარაგრაფი</p>
+    <p id="p2">ეს არის მეორე პარაგრაფი</p>
+    <p id="p3">ეს არის მესამე პარაგრაფი</p>
+    <button onclick="swapParagraphText()">Swap Text</button>
+</body>
+</html>
