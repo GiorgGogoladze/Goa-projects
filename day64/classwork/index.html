@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to the website</h1>
+    <p id="message">Please enter your password.</p>
+
+    <script>
+        const correctPassword = "Gio123";
+
+        let password = "";
+        while (password !== correctPassword) {
+            password = prompt("Please enter your password:");
+            if (password === correctPassword) {
+                document.getElementById("message").innerText = "WWWWWWWWWWelLLLLLLLLcomEEEEEEEEE!";
+                break;
+            } else {
+                alert("არასწორია.მეგობარო სცადე თავიდან");
+            }
+        }
+    </script>
+</body>
+</html>
