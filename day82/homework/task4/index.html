@@ -1,0 +1,16 @@
+<div id="container">
+    <p class="highlight">Highlighted Paragraph</p>
+    <p>Regular Paragraph</p>
+  </div>
+  
+  <script>
+    let highlighted = document.querySelector('.highlight');
+    console.log(highlighted.innerText); // Outputs: Highlighted Paragraph
+  
+    let firstParagraph = document.querySelector('#container p');
+    console.log(firstParagraph.innerText); // Outputs: Highlighted Paragraph
+  
+    let container = document.querySelector('#container');
+    console.log(container.innerHTML); // Outputs: <p class="highlight">Highlighted Paragraph</p> <p>Regular Paragraph</p>
+  </script>
+  

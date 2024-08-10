@@ -1,0 +1,12 @@
+<div id="parent">
+    <p id="first">First Child</p>
+    <p id="second">Second Child</p>
+  </div>
+  
+  <script>
+    let firstChild = document.getElementById('first');
+    let nextSibling = firstChild.nextElementSibling;
+    
+    console.log(nextSibling.innerText); // Outputs: Second Child
+  </script>
+  
