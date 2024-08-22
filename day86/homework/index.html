@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Capture & Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        #carousel-container {
+            width: 500px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            border: 2px solid #ddd;
+        }
+
+        #buttons {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #camera-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #camera {
+            border: 2px solid #ddd;
+            width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="carousel-container">
+    <img id="photo" src="photo1.jpg" alt="Photo">
+    <div id="buttons">
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+    </div>
+</div>
+
+<div id="camera-container">
+    <video id="camera" autoplay></video>
+    <div id="camera-buttons">
+        <button id="capture-btn">Capture Photo</button>
+    </div>
+</div>
+
+<script>
+    const photos = ["photo1.jpg", "photo2.jpg", "photo3.jpg"]; // შეგიძლია შეცვალო საკუთარი სურათებით
+    let currentIndex = 0;
+
+    const photoElement = document.getElementById('photo');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    // განახლება სურათის მიხედვით
+    function updatePhoto() {
+        photoElement.src = photos[currentIndex];
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === photos.length - 1;
+    }
+
+    // ღილაკებზე დაჭერის მოვლენა
+    nextBtn.addEventListener('click', function() {
+        if (currentIndex < photos.length - 1) {
+            currentIndex++;
+            updatePhoto();
+        }
+    });
+
+    prevBtn.addEventListener('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updatePhoto();
+        }
+    });
+
+    // ინიციალური განახლება
+    updatePhoto();
+
+    // Photo Capture Section
+    const videoElement = document.getElementById('camera');
+    const captureBtn = document.getElementById('capture-btn');
+
+    // ჩართვა კამერის წვდომა
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            videoElement.srcObject = stream;
+        })
+        .catch(function(err) {
+            console.error("Error accessing camera: ", err);
+        });
+
+    // Capture ფუნქცია
+    captureBtn.addEventListener('click', function() {
+        const canvas = document.createElement('canvas');
+        canvas.width = videoElement.videoWidth;
+        canvas.height = videoElement.videoHeight;
+        const context = canvas.getContext('2d');
+        context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+
+        // captured სურათის დამატება ფოტოს გამეორებით
+        const capturedImage = canvas.toDataURL('image/png');
+        photos.push(capturedImage);
+        currentIndex = photos.length - 1; // გადადის ბოლო ფოტოზე
+        updatePhoto();
+    });
+</script>
+
+</body>
+</html>
