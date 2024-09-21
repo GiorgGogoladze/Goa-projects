@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Highlight</title>
+</head>
+<body>
+    <p id="text">This is a sample text with some words to highlight.</p>
+    <script>
+        function highlightWord(word) {
+            const textElement = document.getElementById('text');
+            const text = textElement.innerHTML;
+            const highlightedText = text.replace(new RegExp(`(${word})`, 'gi'), '<mark>$1</mark>');
+            textElement.innerHTML = highlightedText;
+        }
+
+        highlightWord('sample'); // მონიშნავს სიტყვას "sample"
+    </script>
+</body>
+</html>
