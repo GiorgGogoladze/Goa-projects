@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App with ES6 and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        input[type="color"] {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #notes {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .note {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Note App with ES6</h1>
+
+<textarea id="noteText" placeholder="Type your note here..."></textarea><br>
+
+<label for="textColor">Text Color:</label>
+<input type="color" id="textColor"><br>
+
+<label for="borderColor">Border Color:</label>
+<input type="color" id="borderColor"><br>
+
+<button id="addNoteBtn">Add Note</button>
+
+<div id="notes"></div>
+
+<script>
+    const addNote = () => {
+        const noteText = document.getElementById('noteText').value;
+        const textColor = document.getElementById('textColor').value;
+        const borderColor = document.getElementById('borderColor').value;
+
+        const note = document.createElement('div');
+        note.className = 'note';
+        note.style.color = textColor;
+        note.style.borderColor = borderColor;
+        note.innerText = noteText;
+
+        document.getElementById('notes').appendChild(note);
+    };
+
+    document.getElementById('addNoteBtn').addEventListener('click', addNote);
+</script>
+
+</body>
+</html>

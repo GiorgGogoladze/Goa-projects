@@ -4,8 +4,8 @@ const processData = () => {
 
 
     const person = {
-        name: 'John Doe',
-        age: 25,
+        name: 'giorgi',
+        age: 13,
         profession: 'Developer'
     };
 
