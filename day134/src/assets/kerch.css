@@ -1,0 +1,20 @@
+/* Kerch.css */
+h2 {
+    font-size: 2rem;
+    color: #444;
+    margin-top: 20px;
+  }
+  
+  nav ul {
+    margin-top: 20px;
+  }
+  
+  nav ul li a {
+    font-size: 1rem;
+    background-color: #17a2b8;
+  }
+  
+  nav ul li a:hover {
+    background-color: #138496;
+  }
+  

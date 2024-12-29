@@ -1,0 +1,20 @@
+/* GeorgianSerials.css */
+h2 {
+    font-size: 2rem;
+    color: #444;
+    margin-top: 20px;
+  }
+  
+  nav ul {
+    margin-top: 20px;
+  }
+  
+  nav ul li a {
+    font-size: 1rem;
+    background-color: #6610f2;
+  }
+  
+  nav ul li a:hover {
+    background-color: #520dc2;
+  }
+  
