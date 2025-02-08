@@ -1,0 +1,120 @@
+/* 🌗 Light & Dark Mode */
+:root {
+  --background-light: #f8f9fa;
+  --text-light: #333;
+  --background-dark: #1e1e1e;
+  --text-dark: #f8f9fa;
+  --primary-color: #007bff;
+  --border-radius: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* 🚗 Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: var(--primary-color);
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #ddd;
+}
+
+/* 📦 Car Cards */
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.car-card {
+  background: white;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.car-card h2 {
+  margin: 10px 0;
+}
+
+.car-card p {
+  color: #555;
+}
+
+.car-card button {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: 0.3s;
+}
+
+.car-card button:hover {
+  background: #0056b3;
+}
+
+/* 🌙 Dark Mode Styles */
+.dark-mode .car-card {
+  background: #2a2a2a;
+  color: white;
+}
+
+.dark-mode .car-card p {
+  color: #bbb;
+}
+
+.dark-mode .toggle-btn {
+  background: black;
+  color: white;
+}
+
+.dark-mode .toggle-btn:hover {
+  background: #333;
+}
