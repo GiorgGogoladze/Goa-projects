@@ -1,0 +1,86 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.header {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  font-size: 2.5em;
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-weight: 700;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 40px;
+  margin: 20px 0;
+  background-color: #FF5722;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #f44336;
+  transform: scale(1.1);
+}
+
+.button:active {
+  background-color: #d32f2f;
+  transform: scale(0.9);
+}
+
+.top-games {
+  margin-top: 50px;
+  font-size: 1.5em;
+  color: #FF5722;
+  list-style-type: none;
+}
+
+.top-games li {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .button {
+    padding: 10px 25px;
+    font-size: 1em;
+  }
+}
