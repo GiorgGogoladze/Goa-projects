@@ -1,0 +1,77 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header style */
+  h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for the product buttons */
+  #products {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for the cart */
+  #cart {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 50%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cart li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #cart li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Button to clear the cart */
+  #cart button {
+    background-color: #f44336;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  #cart button:hover {
+    background-color: #e53935;
+  }
+  
+  /* Centering the cart clear button */
+  #cart button {
+    display: block;
+    margin: 20px auto;
+  }
+  
