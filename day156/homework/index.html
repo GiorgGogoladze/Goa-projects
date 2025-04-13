@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Lite</title>
+</head>
+<body>
+  <h1>🎧 Songs</h1>
+  <form id="form">
+    <input id="title" placeholder="Title" required />
+    <input id="artist" placeholder="Artist" required />
+    <button>Add</button>
+  </form>
+  <ul id="list"></ul>
+
+  <script>
+    const list = document.getElementById("list");
+    const form = document.getElementById("form");
+
+    const load = async () => {
+      const res = await fetch("/api/songs");
+      const songs = await res.json();
+      list.innerHTML = "";
+      songs.forEach(s => {
+        const li = document.createElement("li");
+        li.innerHTML = `${s.title} - ${s.artist} 
+          <button onclick="del(${s.id})">❌</button>`;
+        list.appendChild(li);
+      });
+    };
+
+    form.onsubmit = async e => {
+      e.preventDefault();
+      await fetch("/api/songs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: form.title.value,
+          artist: form.artist.value,
+        })
+      });
+      form.reset();
+      load();
+    };
+
+    const del = async id => {
+      await fetch(`/api/songs/${id}`, { method: "DELETE" });
+      load();
+    };
+
+    load();
+  </script>
+</body>
+</html>
