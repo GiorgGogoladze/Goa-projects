@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background: #1b1b1b;
+  color: #eee;
+  font-family: sans-serif;
+}
+
+.app {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #00cc99;
+}
+
+.book-form input,
+.book-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.book-form button {
+  width: 100%;
+  background: #00cc99;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book-card {
+  background: #2a2a2a;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.book-card button {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
